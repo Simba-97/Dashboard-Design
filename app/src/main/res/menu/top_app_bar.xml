@@ -5,7 +5,7 @@
     <item
         android:id="@+id/favorite"
         android:contentDescription="@string/add"
-        android:icon="@drawable/ic_add"
+        android:icon="@drawable/person"
         android:title="@string/add"
         app:showAsAction="ifRoom" />
 
