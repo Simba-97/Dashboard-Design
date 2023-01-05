@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?><!--Please note that the Android tag is used with the text views to show dummy data-->
+<!--The android tags with tools tag when the app supports dynamic data-->
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            android:paddingStart="24dp"
+            app:menu="@menu/top_app_bar"
+            app:navigationIcon="@drawable/ic_logo" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <!-- Scrollable content -->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_User"
+                android:layout_width="127dp"
+                android:layout_height="127dp"
+                android:layout_margin="30dp"
+                android:src="@drawable/user_image"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="7dp"
+                android:fontFamily="@font/barlow"
+                android:text="john.doe"
+                android:textColor="@color/black"
+                android:textSize="32sp"
+                app:layout_constraintEnd_toEndOf="@id/iv_User"
+                app:layout_constraintStart_toStartOf="@id/iv_User"
+                app:layout_constraintTop_toBottomOf="@id/iv_User" />
+
+            <ImageView
+                android:id="@+id/ivUpload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_upload"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_User"
+                app:layout_constraintEnd_toStartOf="@+id/iv_User"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/iv_User" />
+
+            <TextView
+                android:id="@+id/tvUpload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/barlow_condensed_regular"
+                android:padding="10dp"
+                android:text="Upload"
+                android:textColor="#597DDF"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@id/ivUpload"
+                app:layout_constraintStart_toStartOf="@id/ivUpload"
+                app:layout_constraintTop_toBottomOf="@id/ivUpload" />
+
+            <ImageView
+                android:id="@+id/ivEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_edit"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_User"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/iv_User"
+                app:layout_constraintTop_toTopOf="@+id/iv_User" />
+
+            <TextView
+                android:id="@+id/tvEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/barlow_condensed_regular"
+                android:padding="10dp"
+                android:text="Edit"
+                android:textColor="#597DDF"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@id/ivEdit"
+                app:layout_constraintStart_toStartOf="@id/ivEdit"
+                app:layout_constraintTop_toBottomOf="@id/ivEdit" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvUserName">
+
+                <TextView
+                    android:id="@+id/tvDashBoard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="34dp"
+                    android:fontFamily="@font/barlow_condensed_regular"
+                    android:text="My dashboard"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/switchBtn"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/switchBtn" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="34dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/lineView"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="#D8D8D8"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvDashBoard" />
+
+                <TextView
+                    android:id="@+id/tvFollowers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/barlow_condensed_regular"
+                    android:text="2.3K"
+                    android:textColor="@color/black"
+                    android:textSize="24dp"
+                    app:layout_constraintEnd_toStartOf="@+id/tvArtworks"
+                    app:layout_constraintStart_toStartOf="@id/lineView"
+                    app:layout_constraintTop_toBottomOf="@+id/lineView" />
+
+                <TextView
+                    android:id="@+id/followers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/barlow_condensed_regular"
+                    android:text="Followers"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="@id/tvFollowers"
+                    app:layout_constraintStart_toStartOf="@id/tvFollowers"
+                    app:layout_constraintTop_toBottomOf="@id/tvFollowers" />
+
+                <TextView
+                    android:id="@+id/tvArtworks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/barlow_condensed_regular"
+                    android:text="50"
+                    android:textColor="@color/black"
+                    android:textSize="24dp"
+                    app:layout_constraintEnd_toStartOf="@+id/tvExhibitions"
+                    app:layout_constraintStart_toEndOf="@+id/tvFollowers"
+                    app:layout_constraintTop_toBottomOf="@+id/lineView" />
+
+                <TextView
+                    android:id="@+id/artworks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/barlow_condensed_regular"
+                    android:text="Artworks"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="@id/tvArtworks"
+                    app:layout_constraintStart_toStartOf="@id/tvArtworks"
+                    app:layout_constraintTop_toBottomOf="@id/tvArtworks" />
+
+                <TextView
+                    android:id="@+id/tvExhibitions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/barlow_condensed_regular"
+                    android:text="21"
+                    android:textColor="@color/black"
+                    android:textSize="24dp"
+                    app:layout_constraintEnd_toEndOf="@id/lineView"
+                    app:layout_constraintStart_toEndOf="@+id/tvArtworks"
+                    app:layout_constraintTop_toBottomOf="@+id/lineView" />
+
+                <TextView
+                    android:id="@+id/exhibitions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/barlow_condensed_regular"
+                    android:text="Exhibitions"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="@id/tvExhibitions"
+                    app:layout_constraintStart_toStartOf="@id/tvExhibitions"
+                    app:layout_constraintTop_toBottomOf="@id/tvExhibitions" />
+
+                <View
+                    android:id="@+id/lineView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="#D8D8D8"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/followers" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/lineView2">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/internal1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/internal2"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/icLikes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_likes"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:fontFamily="@font/barlow"
+                            android:text="120"
+                            android:textColor="@color/black"
+                            android:textSize="22sp"
+                            app:layout_constraintBottom_toBottomOf="@id/icLikes"
+                            app:layout_constraintStart_toEndOf="@+id/icLikes"
+                            app:layout_constraintTop_toTopOf="@id/icLikes" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/internal3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/internal2"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/icShares"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_share"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:fontFamily="@font/barlow"
+                            android:text="2.3K"
+                            android:textColor="@color/black"
+                            android:textSize="22sp"
+                            app:layout_constraintBottom_toBottomOf="@id/icShares"
+                            app:layout_constraintStart_toEndOf="@+id/icShares"
+                            app:layout_constraintTop_toTopOf="@id/icShares" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/internal2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        app:layout_constraintEnd_toStartOf="@+id/internal3"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/internal1"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/icReach"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_reach"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:fontFamily="@font/barlow"
+                            android:text="43K"
+                            android:textColor="@color/black"
+                            android:textSize="22sp"
+                            app:layout_constraintBottom_toBottomOf="@id/icReach"
+                            app:layout_constraintStart_toEndOf="@+id/icReach"
+                            app:layout_constraintTop_toTopOf="@id/icReach" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <ImageView
+                    android:id="@+id/ivColorPallette"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bitmap"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/layout2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="pallette"
+                    android:fontFamily="@font/barlow_condensed_regular"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@id/ivColorPallette"
+                    app:layout_constraintStart_toStartOf="@id/ivColorPallette"
+                    app:layout_constraintTop_toTopOf="@id/ivColorPallette" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
