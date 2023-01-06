@@ -1,4 +1,4 @@
-package com.simba.dashboard_design_app.di
+package com.simba.dashboard_design_app.di.modules
 
 import com.simba.dashboard_design_app.di.component.IoDispatcher
 import dagger.Module

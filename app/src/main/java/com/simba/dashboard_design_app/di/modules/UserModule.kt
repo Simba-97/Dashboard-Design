@@ -1,4 +1,4 @@
-package com.simba.dashboard_design_app.di
+package com.simba.dashboard_design_app.di.modules
 
 import android.app.Application
 import android.content.Context

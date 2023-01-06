@@ -8,7 +8,19 @@
         android:id="@+id/rvUploads"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressUpload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/rvUploads"
+        app:layout_constraintEnd_toEndOf="@id/rvUploads"
+        app:layout_constraintStart_toStartOf="@id/rvUploads"
+        app:layout_constraintTop_toTopOf="@id/rvUploads" />
 </androidx.constraintlayout.widget.ConstraintLayout>

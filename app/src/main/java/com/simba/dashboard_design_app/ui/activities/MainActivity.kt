@@ -4,10 +4,12 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.content.res.AppCompatResources
 import com.google.android.material.tabs.TabLayoutMediator
-import com.simba.dashboard_design_app.ProfileTabAdapter
+import com.simba.dashboard_design_app.ui.adapters.ProfileTabAdapter
 import com.simba.dashboard_design_app.R
 import com.simba.dashboard_design_app.databinding.ActivityMainBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private var _binding: ActivityMainBinding? = null

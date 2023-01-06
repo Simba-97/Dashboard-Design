@@ -1,10 +1,11 @@
-package com.simba.dashboard_design_app
+package com.simba.dashboard_design_app.ui.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.simba.dashboard_design_app.data.models.ImageDetails
 import com.simba.dashboard_design_app.databinding.ItemImageBinding
+import com.simba.dashboard_design_app.utils.BindingUtils
 
 class UploadScreenAdapter(private var list: List<ImageDetails>) :
     RecyclerView.Adapter<UploadScreenAdapter.UploadScreenViewHolder>() {
@@ -18,6 +19,11 @@ class UploadScreenAdapter(private var list: List<ImageDetails>) :
     }
 
     override fun onBindViewHolder(holder: UploadScreenViewHolder, position: Int) {
+        with(holder) {
+            with(list[position]) {
+                BindingUtils.loadAndBindImage(binding.ivImage, this.url)
+            }
+        }
     }
 
     override fun getItemCount(): Int {

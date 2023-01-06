@@ -1,4 +1,4 @@
-package com.simba.dashboard_design_app
+package com.simba.dashboard_design_app.ui.adapters
 
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
